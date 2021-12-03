@@ -3,11 +3,10 @@ epsilon = ''
 
 with open('Data.txt') as data:
     diagnostics = data.readlines()
-    for i in range(0,len("000011101111")):
+    for i in range(0,len(diagnostics[0])-1):
         one_counter = 0
         zero_counter = 0
         for power in diagnostics:
-            print(power)
             if power[i] == '1':
                 one_counter = one_counter + 1
             elif power[i] == '0':

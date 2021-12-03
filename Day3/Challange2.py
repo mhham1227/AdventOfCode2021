@@ -35,7 +35,7 @@ def getPositionValues(diagnostics):
 with open('Data.txt') as data:
     oxygenData = data.readlines()
     co2ScrubberData = oxygenData.copy()
-    for i in range(0,len("000011101111")):
+    for i in range(0,len(oxygenData[0])-1):
         oxygenData = filterData(oxygenData, i, "oxygen")
         co2ScrubberData = filterData(co2ScrubberData, i, "co2Scubber")
         if len(oxygenData) == 1:
